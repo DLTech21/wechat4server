@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table name="ofuser" catalog="openfire" class="OfUser"></table>
+	<table name="usertable" catalog="hcapi" class="WcUser"></table>
+	<table name="logininfotable" catalog="hcapi" class="WcLoginInfo"></table>
+	<table name="messagetable" catalog="hcapi" class="WcMessages"></table>
+	<table name="onlinemusic" catalog="hcapi" class="WcMusic"></table>
+	<table name="wc_file" catalog="hcapi" class="WcFile"></table>
+</hibernate-reverse-engineering>

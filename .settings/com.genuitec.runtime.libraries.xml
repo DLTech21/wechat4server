@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+  <add-on id="jaxrs.jackson"/>
+  <add-on id="jaxrs.fastinfoset"/>
+  <add-on id="jaxrs.client"/>
+  <add-on id="jaxrs.atom"/>
+  <add-on id="jaxrs.mail"/>
+  <add-on id="jaxrs.json"/>
+</project>
