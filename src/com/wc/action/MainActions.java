@@ -177,11 +177,11 @@ public class MainActions {
 			SimpleJSONObject res = new SimpleJSONObject();
 			WcUser me = uDao.findByApiKey(apiKey);
 			
-
 			// 获取工程根目录
-			String rootPath = new File("").getAbsolutePath();
-			// rootPath=FileUtil.getParent(rootPath)+ File.separator+"webapps";
-			rootPath += File.separator + "webapps";
+			File rootFile = new File("").getAbsoluteFile();
+			//tomcat需要
+			String rootPath= rootFile.getParentFile().getAbsolutePath() + File.separator +"webapps";
+			System.out.println(rootPath);
 			// ArrayList<VsFile> files = new ArrayList<VsFile>();
 			SimpleJSONArray fileArr = new SimpleJSONArray();
 			List<FormDataBodyPart> l = form.getFields("file");
@@ -195,7 +195,7 @@ public class MainActions {
 				String fileLocation = rootPath + File.separator + "res"
 						+ File.separator + System.currentTimeMillis() + "."
 						+ FileUtil.getEndWith(detail.getFileName());
-				System.out.print(fileLocation);
+				System.out.println(fileLocation);
 				File file = FileUtil.writeToFile(is, fileLocation);
 				if (file != null) {
 					WcFile imageFile = new WcFile();

@@ -7,7 +7,7 @@ import java.io.OutputStream;
 
 public class FileUtil {
 	/*
-	 * 写文件
+	 * 写锟侥硷拷
 	 */
 
 	public static File writeToFile(InputStream is, String uploadedFileLocation) {
@@ -30,7 +30,6 @@ public class FileUtil {
 				e.printStackTrace();
 			}
 		}
-		System.out.println(uploadedFileLocation+"文件大小"+file.length());
 		if (file.length()<5) {
 			file.delete();
 			return null;
