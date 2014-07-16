@@ -43,7 +43,6 @@ public class MainActions {
 	
 	
 	/* dao组 */
-
 	private WcUserDAO uDao = new WcUserDAO();
 	private OfUserDAO ofDAO=new OfUserDAO();
 	private WcFileDAO fileDao=new WcFileDAO();
@@ -178,9 +177,8 @@ public class MainActions {
 			WcUser me = uDao.findByApiKey(apiKey);
 			
 			// 获取工程根目录
-			File rootFile = new File("").getAbsoluteFile();
-			//tomcat需要
-			String rootPath= rootFile.getParentFile().getAbsolutePath() + File.separator +"webapps";
+			File rootFile = new File(System.getProperty("catalina.home")).getAbsoluteFile();
+			String rootPath= rootFile.getAbsolutePath() + File.separator +"webapps";
 			System.out.println(rootPath);
 			// ArrayList<VsFile> files = new ArrayList<VsFile>();
 			SimpleJSONArray fileArr = new SimpleJSONArray();

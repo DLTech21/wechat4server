@@ -14,8 +14,7 @@
 			<property name="hibernate.connection.url"
 				value="jdbc:mysql://localhost:3306/HCAPI?useUnicode=true&amp;characterEncoding=UTF-8" />
 			<property name="hibernate.connection.username" value="root" />
-			<property name="hibernate.connection.password"
-				value="123456" />
+			<property name="hibernate.connection.password" value="a123456" />
 		</properties>
 	</persistence-unit>
 </persistence>
